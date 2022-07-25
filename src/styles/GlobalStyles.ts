@@ -9,7 +9,7 @@ export default createGlobalStyle`
   }
   body{
     width: 100%;
-    background-color: ${props => props.theme.colors.background};
+    background-color: #212329;
     align-items: center;
     justify-content: center;
     
