@@ -22,7 +22,6 @@ const HomePage = () => {
           </Nav>
         </Router>
       </Header>
-
       <MoviesContainer>
         <MovieCard />
       </MoviesContainer>

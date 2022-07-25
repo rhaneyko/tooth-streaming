@@ -13,12 +13,17 @@ const MovieCard = () => {
       .catch((error) => console.log(error));
   }, []);
 
+  const openMovie = (movie: any) => {
+    window.open(`https://www.themoviedb.org/movie/${movie.id}`);
+  };
+
   return (
     <Container>
       {movies &&
         movies.map((movie) => (
           <Card key={movie.id}>
             <MovieImage
+              onClick={() => openMovie(movie)}
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             />
           </Card>
