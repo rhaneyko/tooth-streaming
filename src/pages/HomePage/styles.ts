@@ -46,12 +46,12 @@ export const Nav = styled.nav`
 
 export const MoviesContainer = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
 
-    width: 60%;
 
     padding: 50px;
 
-    background-color: white;
 `;
 
 export const Title = styled.h1`
