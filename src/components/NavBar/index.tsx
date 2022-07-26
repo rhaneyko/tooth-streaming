@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 
 import { Bars, Container, Nav, Logo } from "./styles";
@@ -23,13 +23,9 @@ const NavBar = () => {
       <Router>
         <Bars onClick={navToggle} className={icon} />
         <Nav className={active}>
-          <NavHashLink to="#home">Home</NavHashLink>
-          <NavHashLink smooth to="#movies">
-            Filmes
-          </NavHashLink>
-          <NavHashLink smooth to="#series">
-            Series
-          </NavHashLink>
+          <Link to="/">Home</Link>
+          <Link to="/movies">Filmes</Link>
+          <Link to="/series">Series</Link>
         </Nav>
       </Router>
     </Container>
