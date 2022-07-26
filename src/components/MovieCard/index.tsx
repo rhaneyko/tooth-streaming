@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { Container, Card, MovieImage } from "./styles";
 
@@ -13,19 +14,21 @@ const MovieCard = () => {
       .catch((error) => console.log(error));
   }, []);
 
-  const openMovie = (movie: any) => {
-    window.open(`https://www.themoviedb.org/movie/${movie.id}`);
-  };
+  // const openMovie = (movie: any) => {
+  //   window.open(`https://www.themoviedb.org/movie/${movie.id}`);
+  // };
 
   return (
     <Container>
       {movies &&
         movies.map((movie) => (
           <Card key={movie.id}>
+            {/* <Link to={`/movie/${movie.id}`}> */}
             <MovieImage
-              onClick={() => openMovie(movie)}
+              //onClick={() => openMovie(movie)}
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             />
+            {/* </Link> */}
           </Card>
         ))}
     </Container>
