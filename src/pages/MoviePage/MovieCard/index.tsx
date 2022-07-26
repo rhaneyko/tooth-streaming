@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 //import { Link } from "react-router-dom";
 
 import { Container, Card, MovieImage } from "./styles";
@@ -18,11 +19,11 @@ const MovieCard = () => {
       {movies &&
         movies.map((movie) => (
           <Card key={movie.id}>
-            {/* <Link to={`/movies${movie.id}`}> */}
-            <MovieImage
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-            />
-            {/* </Link> */}
+            <Link to={`/movies${movie.id}`}>
+              <MovieImage
+                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+              />
+            </Link>
           </Card>
         ))}
     </Container>
