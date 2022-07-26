@@ -23,13 +23,11 @@ const NavBar = () => {
       <Router>
         <Bars onClick={navToggle} className={icon} />
         <Nav className={active}>
-          <NavHashLink smooth to="#home">
-            Home
-          </NavHashLink>
-          <NavHashLink smooth to="#about">
+          <NavHashLink to="#home">Home</NavHashLink>
+          <NavHashLink smooth to="#movies">
             Filmes
           </NavHashLink>
-          <NavHashLink smooth to="#projects">
+          <NavHashLink smooth to="#series">
             Series
           </NavHashLink>
         </Nav>
