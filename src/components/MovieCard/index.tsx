@@ -1,7 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { apiMovie } from "../../services/api";
 
 import { Container, Card, MovieImage } from "./styles";
+
+interface movieProps {
+  id: string;
+  poster_path: string;
+  title: string;
+  name: string;
+  release_date: Date;
+  overview: string;
+  genre_ids: [];
+}
 
 const MovieCard = () => {
   const [movies, setMovies] = useState<any[]>();
@@ -23,7 +34,7 @@ const MovieCard = () => {
       {movies &&
         movies.map((movie) => (
           <Card key={movie.id}>
-            {/* <Link to={`/movie/${movie.id}`}> */}
+            {/* <Link to={`/movies${movie.id}`}> */}
             <MovieImage
               //onClick={() => openMovie(movie)}
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
