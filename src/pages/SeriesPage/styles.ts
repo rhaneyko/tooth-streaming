@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
 export const SeriesContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      background-color: red;
 
-    padding-top: 50px;
+width: 300px;
+height: 300px;
+
+h1{
+    color: white;
+}
     
 `;

@@ -12,14 +12,14 @@ const MovieDetail = () => {
       .catch((error) => console.log(error));
   }, []);
 
+  const poster = "https://image.tmdb.org/t/p/w342/";
+
   return (
     <Container>
       {movies &&
         movies.map((movie) => (
           <Card key={movie.id}>
-            <MovieImage
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-            />
+            <MovieImage src={`${poster}${movie.poster_path}`} />
           </Card>
         ))}
     </Container>
