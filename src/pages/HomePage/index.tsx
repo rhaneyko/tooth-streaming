@@ -1,10 +1,16 @@
 import React from "react";
-import { Container } from "./styles";
+import PopularMovieCard from "./PopularMovieCard";
+import { Container, PopularMoviesContainer, ScrollMovies } from "./styles";
 
 const HomePage = () => {
   return (
     <Container>
-      <h1>HomePage</h1>
+      <PopularMoviesContainer>
+        <h1>Filmes populares</h1>
+        <ScrollMovies>
+          <PopularMovieCard />
+        </ScrollMovies>
+      </PopularMoviesContainer>
     </Container>
   );
 };

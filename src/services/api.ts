@@ -11,4 +11,15 @@ export const movieDetail = axios.create({
   baseURL: `https://api.themoviedb.org/3/movie/`
 });
 
+export const topRatedMovies = axios.create({
+  baseURL: `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=1`
+});
+
+export const popularMovies = axios.create({
+  baseURL: `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=pt-BR&page=1`
+});
+
+export const latestMovies = axios.create({
+  baseURL: `https://api.themoviedb.org/3/movie/latest?api_key=${key}&language=en-US`
+});
 

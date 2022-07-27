@@ -1,12 +1,21 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    background-color: red;
+    display: flex;
+    height: 100vh;
 
-    width: 300px;
-    height: 300px;
-
+    justify-content: center;
+    
     h1{
         color: white;
     }
+`;
+
+export const PopularMoviesContainer = styled.div`
+    width: 700px;
+    height: 400px;
+`;
+
+export const ScrollMovies = styled.div`
+    padding: 20px;
 `;
