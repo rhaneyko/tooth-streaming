@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
+    width: 100%;
     height: 100vh;
 
     justify-content: center;
@@ -12,8 +13,15 @@ export const Container = styled.div`
 `;
 
 export const PopularMoviesContainer = styled.div`
-    width: 700px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
     height: 400px;
+    
+    border: 1px solid #FFF;
+    background-color: #212329;
 `;
 
 export const ScrollMovies = styled.div`
