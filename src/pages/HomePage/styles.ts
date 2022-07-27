@@ -19,9 +19,6 @@ export const PopularMoviesContainer = styled.div`
     align-items: center;
 
     height: 400px;
-    
-    border: 1px solid #FFF;
-    background-color: #212329;
 `;
 
 export const ScrollMovies = styled.div`
