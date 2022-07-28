@@ -24,7 +24,8 @@ export const latestMovies = axios.create({
 });
 
 export const upcomingMovies = axios.create({
-  baseURL: `https://api.themoviedb.org/3/movie/upcoming?api_key=4633d4711231f27cbe562a85959df2df&language=pt-br&page=1`
+  baseURL: `https://api.themoviedb.org/3/movie/upcoming?api_key=${key}&language=pt-br&page=1`
+
 });
 
 export const imagesMovies = axios.create({

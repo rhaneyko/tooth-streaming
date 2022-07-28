@@ -28,18 +28,18 @@ const PopularMovieCard = () => {
   }, 
   []);
 
-  useEffect(() => {
-    movieDetail.get('/movie/top_rated?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR&page=1')
-    .then(response => {
-      console.log(response.data);
+  // useEffect(() => {
+  //   movieDetail.get('/movie/top_rated?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR&page=1')
+  //   .then(response => {
+  //     console.log(response.data);
     
-    }
-    )
-    .catch(error => {
-      console.log(error);
-    }
-    )
-  }, []);
+  //   }
+  //   )
+  //   .catch(error => {
+  //     console.log(error);
+  //   }
+  //   )
+  // }, []);
 
 
    const [ genres, setGenres ] = useState([]);
