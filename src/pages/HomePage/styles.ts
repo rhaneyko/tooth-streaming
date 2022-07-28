@@ -30,6 +30,8 @@ export const SideCenter = styled.div`
     height: 750px;
 
     border:1px solid white;
+
+    padding-top: 20px;
 `;
 
 export const SideRight = styled.div`

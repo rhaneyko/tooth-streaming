@@ -36,15 +36,39 @@ export const Blurred = styled.div`
 `;
 
 export const Card = styled.div`
+    display: flex;
+    flex-direction: row;
+
     width: 400px;
     height: 273px;
 
     margin: 10px;
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0, 0.4);
+
+    p{
+        color: white;
+        align-self: justify;
+    }
+`;
+
+export const Content = styled.div``;
+
+export const Info = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+
+
 `;
 
 export const MovieImage = styled.img`
     width: 180px;
     height: 273px;
 `;
+
+export const MovieTitle = styled.p``;
+
+export const ReleaseDate = styled.p``;
