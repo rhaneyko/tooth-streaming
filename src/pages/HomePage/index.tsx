@@ -39,7 +39,7 @@ const HomePage = () => {
       </SideCenter>
       <SideRight>
         <UpcomingContainer>
-        <h1></h1>
+        <h1>Irão ser lançados</h1>
           <Upcoming />
         </UpcomingContainer>
       </SideRight>

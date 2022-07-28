@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import {
     Container,
     Card,
+    Blurred,
     MovieImage,
 } from './styles'
 
@@ -34,11 +35,16 @@ const Upcoming: React.FC = () => {
             {
             upcoming &&
             upcoming.map(movie => (
+                <><Blurred
+              style={{
+                backgroundImage: `url(https://image.tmdb.org/t/p/w500/${movie.poster_path})`,
+              }}
+            ></Blurred>
                 <Card key={movie.id}>
                     <MovieImage
                         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                     />
-                </Card>
+                </Card></>
             ))}
       
         </Container>

@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
+
+    justify-content: space-between;
     width: 100%;
     height: 100vh;
     
@@ -15,24 +17,29 @@ export const SideLeft = styled.div`
     display: flex;
     flex-direction: column;
     width: 25%;
-    height: 80%;
+    height: 750px;
+
+    border:1px solid white;
 `;
 
 export const SideCenter = styled.div`
     display: flex;
     flex-direction: column;
    
-    width: 50%;
-    height: 80%;
-   
+    width: 48%;
+    height: 750px;
+
+    border:1px solid white;
 `;
 
 export const SideRight = styled.div`
     display: flex;
     flex-direction: column;
     
-    width: 25%;
-    height: 80%;
+    width: 500px;
+    height: 750px;
+    
+    border:1px solid white;
 `;
 
 export const PopularMoviesContainer = styled.div`
