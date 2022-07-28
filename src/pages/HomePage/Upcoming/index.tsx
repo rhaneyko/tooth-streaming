@@ -10,6 +10,8 @@ import {
     Info,
     MovieTitle,
     ReleaseDate,
+    ButtonTrailer,
+    ButtonText,
 } from './styles'
 
 //import { key, upcomingMovies } from '../../../services/api'
@@ -50,6 +52,9 @@ const Upcoming: React.FC = () => {
                         <MovieTitle>{movie.title}</MovieTitle>
                         <ReleaseDate>{formatDate(movie.release_date)}</ReleaseDate>
                       </Info>
+                        <ButtonTrailer>
+                            <ButtonText>Watch Trailer</ButtonText>
+                        </ButtonTrailer>
                     </Content>
                 </Card></>
             ))}

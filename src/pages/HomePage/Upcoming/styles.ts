@@ -52,16 +52,26 @@ export const Card = styled.div`
     }
 `;
 
-export const Content = styled.div``;
+export const Content = styled.div`
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+    
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+`;
 
 export const Info = styled.div`
     display: flex;
     flex-direction: column;
 
-    justify-content: space-between;
     align-items: center;
 
-
+    height: 100px;
 `;
 
 export const MovieImage = styled.img`
@@ -69,6 +79,38 @@ export const MovieImage = styled.img`
     height: 273px;
 `;
 
-export const MovieTitle = styled.p``;
+export const MovieTitle = styled.p`
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    
+    margin-top: 10px;
+`;
 
-export const ReleaseDate = styled.p``;
+export const ReleaseDate = styled.p`
+    color: #FFF;
+    font-size: 15px;
+    text-align: center;
+
+    margin-top: 10px;
+`;
+
+export const ButtonTrailer = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 30px;
+
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+
+    color: #FFF;
+
+    background-color: rgba(255, 255, 255, 0.2);
+`;
+
+export const ButtonText = styled.p``;
