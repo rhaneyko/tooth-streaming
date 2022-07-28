@@ -42,11 +42,9 @@ export const Card = styled.div`
     margin: 10px;
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0, 0.4);
-
-    `;
+`;
 
 export const MovieImage = styled.img`
     width: 180px;
     height: 273px;
 `;
-
