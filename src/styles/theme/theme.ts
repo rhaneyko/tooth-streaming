@@ -12,4 +12,9 @@ export default {
         borderButton: '#0065FF',
         cardBackground: '#FFFFFF',
     },
+
+    backgroundImage: {
+        backgroundImage: `url('https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg')`,
+    }
+
 };

@@ -1,10 +1,13 @@
 import styled from 'styled-components';
-const poster = 'https://image.tmdb.org/t/p/w500';
 
 export const Container = styled.div`
     display: flex;
 
     width: 800px;
+    height: 400px;
+
+    justify-content: center;
+    align-items: center;
 
     .rec.rec-arrow {
       border-radius: 50px;
@@ -31,105 +34,105 @@ export const Container = styled.div`
     }
 `;
 
+export const Blurred = styled.div`
+    display: flex;
+    width: 100%;
+    height: 320px;
+    
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+`;
+
 export const Card = styled.div`
     display: flex;
     flex-direction: row;
-
-    width: 800px;
-    height: 273px;
+    justify-content: space-between;
 
     align-items: center;
+
+    width: 700px;
+    height: 300px;
+
+    align-items: center;
+
+    padding: 22px 30px 0 30px;
+
+    position: absolute;
+    z-index: 2;
 `;
 
 export const MovieImage = styled.img`
     width: 180px;
     height: 273px;
 
-    border-radius: 15px;
+    border-radius: 5px;
 `;
 
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
+    
+    width: 400px;
+    height: 300px;
 
     align-items: center;
+
+    border-radius: 20px;
+    
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4);
 `;
 
 export const Info = styled.div`
     display: flex;
     flex-direction: column;
-    
-    width: 500px;
-    height: 200px;
 
-    padding: 5px 0 0 20px;
-`;
+    
+    width: 400px;
+    height: 300px;
+
+    padding: 5px 10px 0 10px;
+    `;
 
 export const MovieTitle = styled.h1`
     color: white;
-
+    
     font-size: 20px;
-
-`;
+    `;
 
 export const ReleaseDate = styled.p`
     color: white;
     font-size: 17px;
-
-`;
-
-export const VoteAverage = styled.p`
-    color: white;
-    font-size: 17px;
-
 `;
 
 export const Overview = styled.p`
     color: white;
-    font-size: 15px;
+    font-size: 13px;
+
+    text-align: justify;
 
     margin-top: 10px;
 `;
 
-export const Buttons = styled.div`
-    display: flex;
-    flex-direction: row;
-`;
+export const Genres = styled.div`
+   display: flex;
+   position: absolute;
 
-export const ButtonTrailer = styled.button`
-    display: flex;
+   margin-top: 230px;
 
-    justify-content: center;
-    align-items: center;
+  p {
+    margin: 20px 10px 0 0;
+    padding: 5px 15px;
 
-    width: 150px;
-    height: 40px;
+    font-size: 12px;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
 
-    margin: 5px;
-
-    border: 1px solid #212329;
-
-    background-color: #212329;
-`;
-
-export const ButtonWatchMovie = styled.button`
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    width: 150px;
-    height: 40px;
-
-    margin: 5px;
-
-    border: 1px solid #212329;
-
-    background-color: #212329;
-`;
-
-export const ButtonText = styled.p`
-    color: #FFF;
-    font-weight: bold;
-    font-size: 15px;
+    border-radius: 11px;
+  }
 `;

@@ -23,3 +23,10 @@ export const latestMovies = axios.create({
   baseURL: `https://api.themoviedb.org/3/movie/latest?api_key=${key}&language=en-US`
 });
 
+export const upcomingMovies = axios.create({
+  baseURL: `https://api.themoviedb.org/3/movie/upcoming?api_key=4633d4711231f27cbe562a85959df2df&language=pt-br&page=1`
+});
+
+export const imagesMovies = axios.create({
+  baseURL: `https://image.tmdb.org/t/p/w500`
+});
