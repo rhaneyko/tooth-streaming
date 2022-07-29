@@ -7,7 +7,7 @@ export const Container = styled.div`
     align-items: center;
 
     width: 450px;
-    height: 320px;
+    height: 800px;
 
     overflow-y: scroll;
 

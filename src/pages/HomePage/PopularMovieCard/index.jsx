@@ -28,20 +28,6 @@ const PopularMovieCard = () => {
   }, 
   []);
 
-  // useEffect(() => {
-  //   movieDetail.get('/movie/top_rated?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR&page=1')
-  //   .then(response => {
-  //     console.log(response.data);
-    
-  //   }
-  //   )
-  //   .catch(error => {
-  //     console.log(error);
-  //   }
-  //   )
-  // }, []);
-
-
    const [ genres, setGenres ] = useState([]);
    useEffect(() => {
      fetch(
@@ -50,17 +36,7 @@ const PopularMovieCard = () => {
        .then((response) => response.json())
        .then((json) => setGenres(json.genres));
    }, []);
-
-  const [trailer, setTrailer] = useState([]);
-
-  useEffect(() => {
-    fetch(
-      'https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
-    )
-      .then((response) => response.json())
-      .then((json) => setTrailer(json.results));
-  }, []);
-
+  
   const dataFormat = (date) => {
     const dateFormat = new Date(date);
     const year = dateFormat.getFullYear();
@@ -70,7 +46,7 @@ const PopularMovieCard = () => {
 
   return (
     <Container>
-      <Carousel showArrows={true} itemsToShow={1} itemsToScroll={1} disableArrowsOnEnd 
+      <Carousel showArrows={true} itemsToShow={1} itemsToScroll={1} disableArrowsOnEnd autoPlaySpeed={5000} enableAutoPlay
       >
         {movies &&
           movies.map((movie) => (

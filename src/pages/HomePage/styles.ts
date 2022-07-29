@@ -39,11 +39,12 @@ export const SideRight = styled.div`
     
     width: 500px;
     height: 750px;
-    
-    border:1px solid white;
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+    color: white;
+    font-size: 26px;
+`;
 
 export const PopularMoviesContainer = styled.div`
     display: flex;
@@ -62,7 +63,7 @@ export const UpcomingContainer = styled.div`
     display: flex;
     flex-direction: column;
     
-    height: 400px;
+    height: 800px;
 
     align-items: center;
 `;

@@ -22,7 +22,7 @@ const TopRated = () => {
 
   return (
     <Container>
-       <Carousel showArrows={true} itemsToShow={3} itemsToScroll={1} disableArrowsOnEnd >
+       <Carousel showArrows={true} itemsToShow={3} itemsToScroll={1} disableArrowsOnEnd enableAutoPlay autoPlaySpeed={5000}>
       {movies &&
         movies.map((movie) => (
           <Card key={movie.id}>
