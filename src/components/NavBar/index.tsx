@@ -17,17 +17,13 @@ const NavBar = () => {
     } else setIcon('nav_toggler');
   };
 
-  const navigate = useNavigate();
-
   return (
     <Container>
       <Logo>LOGO</Logo>
       <Router>
         <Bars onClick={navToggle} className={icon} />
         <Nav className={active}>
-          <Link 
-            onClick={() => navigate('/')}
-          to={'/'}>Home</Link>
+          <Link to={'/'}>Home</Link>
           <Link to={'/movies'}>Filmes</Link>
           <Link to={'/series'}>Series</Link>
         </Nav>
