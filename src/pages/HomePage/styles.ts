@@ -5,17 +5,17 @@ export const Container = styled.div`
     flex-direction: row;
 
     justify-content: space-between;
+
     width: 100%;
     height: 100vh;
-    
-    h1{
-        color: white;
-    }
+
+    padding-top: 20px;
 `;
 
 export const SideLeft = styled.div`
     display: flex;
     flex-direction: column;
+
     width: 25%;
     height: 750px;
 
@@ -29,8 +29,6 @@ export const SideCenter = styled.div`
     align-items: center;
    
     width: 47%;
-
-    padding-top: 20px;
 `;
 
 export const SideRight = styled.div`

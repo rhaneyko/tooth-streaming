@@ -19,17 +19,6 @@ import TopRated from './TopRated';
 const HomePage = () => {
   return (
     <Container>
-      {/* <div
-        style={{
-          display: 'flex',
-          width: '100%',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-
-          background: 'white'
-        }}
-      > */}
       <SideLeft></SideLeft>
       <SideCenter>
         <PopularMoviesContainer>
@@ -50,7 +39,6 @@ const HomePage = () => {
           <Upcoming />
         </UpcomingContainer>
       </SideRight>
-      {/* </div> */}
     </Container>
   );
 };

@@ -9,7 +9,9 @@ export const Container = styled.div`
     width: 450px;
     height: 800px;
 
+    margin-top: 10px;
     overflow-y: scroll;
+
 
     &::-webkit-scrollbar {
      width: 7px;
