@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from 'react-elastic-carousel';
-import { movieDetail } from '../../../services/api';
+    
 //import { Link } from 'react-router-dom';
 
 import { 
