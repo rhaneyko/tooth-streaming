@@ -25,11 +25,10 @@ export const SideLeft = styled.div`
 export const SideCenter = styled.div`
     display: flex;
     flex-direction: column;
-   
-    width: 48%;
-    height: 750px;
 
-    border:1px solid white;
+    align-items: center;
+   
+    width: 47%;
 
     padding-top: 20px;
 `;
@@ -43,6 +42,8 @@ export const SideRight = styled.div`
     
     border:1px solid white;
 `;
+
+export const Title = styled.h1``;
 
 export const PopularMoviesContainer = styled.div`
     display: flex;
@@ -65,5 +66,15 @@ export const UpcomingContainer = styled.div`
 
     align-items: center;
 `;
+
+export const TopRatedContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+`;
+
 
 

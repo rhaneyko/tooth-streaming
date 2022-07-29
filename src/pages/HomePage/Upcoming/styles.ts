@@ -43,12 +43,12 @@ export const Card = styled.div`
     height: 273px;
 
     margin: 10px;
+
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0, 0.4);
 
     p{
         color: white;
-        align-self: justify;
     }
 `;
 
@@ -60,9 +60,7 @@ export const Content = styled.div`
     
     align-items: center;
 
-    width: 100%;
-    height: 100%;
-
+    width: 220px;
 `;
 
 export const Info = styled.div`
@@ -71,7 +69,9 @@ export const Info = styled.div`
 
     align-items: center;
 
-    height: 100px;
+    width: 220px;
+
+    padding: 10px;
 `;
 
 export const MovieImage = styled.img`
@@ -81,7 +81,7 @@ export const MovieImage = styled.img`
 
 export const MovieTitle = styled.p`
     color: #FFF;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
     
@@ -90,7 +90,7 @@ export const MovieTitle = styled.p`
 
 export const ReleaseDate = styled.p`
     color: #FFF;
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
 
     margin-top: 10px;
@@ -105,6 +105,7 @@ export const ButtonTrailer = styled.button`
     height: 30px;
 
     border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
     margin-bottom: 10px;
 

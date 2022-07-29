@@ -21,7 +21,7 @@ const PopularMovieCard = () => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     fetch(
-      'https://api.themoviedb.org/3/movie/top_rated?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR&page=1'
+      'https://api.themoviedb.org/3/movie/popular?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
     )
       .then((response) => response.json())
       .then((json) => setMovies(json.results));

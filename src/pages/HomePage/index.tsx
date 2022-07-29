@@ -5,13 +5,16 @@ import {
   SideLeft,
   SideCenter,
   SideRight,
+  Title,
   PopularMoviesContainer, 
   ScrollMovies,
   UpcomingContainer, 
+  TopRatedContainer,
 } from './styles';
 
 import PopularMovieCard from './PopularMovieCard';
 import Upcoming from './Upcoming';
+import TopRated from './TopRated';
 
 const HomePage = () => {
   return (
@@ -30,16 +33,20 @@ const HomePage = () => {
       <SideLeft></SideLeft>
       <SideCenter>
         <PopularMoviesContainer>
-          <h1>Filmes populares</h1>
+          <Title>Filmes populares</Title>
           <ScrollMovies>
             <PopularMovieCard />
           </ScrollMovies>
-        </PopularMoviesContainer> 
+        </PopularMoviesContainer>
+        <TopRatedContainer>
+        <Title>Melhores avaliados</Title>
+          <TopRated/>
+        </TopRatedContainer> 
 
       </SideCenter>
       <SideRight>
         <UpcomingContainer>
-        <h1>Irão ser lançados</h1>
+        <Title>Irão ser lançados</Title>
           <Upcoming />
         </UpcomingContainer>
       </SideRight>

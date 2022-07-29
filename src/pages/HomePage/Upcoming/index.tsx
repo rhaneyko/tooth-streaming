@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 
-
 import {
     Container,
     Card,
@@ -50,10 +49,10 @@ const Upcoming: React.FC = () => {
                     <Content>
                       <Info>
                         <MovieTitle>{movie.title}</MovieTitle>
-                        <ReleaseDate>{formatDate(movie.release_date)}</ReleaseDate>
+                        <ReleaseDate>Data de lançamento: {formatDate(movie.release_date)}</ReleaseDate>
                       </Info>
                         <ButtonTrailer>
-                            <ButtonText>Watch Trailer</ButtonText>
+                            <ButtonText>Assistir Trailer</ButtonText>
                         </ButtonTrailer>
                     </Content>
                 </Card></>
