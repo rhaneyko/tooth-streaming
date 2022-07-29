@@ -31,16 +31,15 @@ const Upcoming: React.FC = () => {
         return dateFormate.toLocaleDateString('pt-BR');
     }
 
-
     return (
         <Container>
-            {
-            upcoming &&
+            {upcoming &&
             upcoming.map(movie => (
-                <><Blurred
-              style={{
-                backgroundImage: `url(https://image.tmdb.org/t/p/w500/${movie.poster_path})`,
-              }}
+            <>
+             <Blurred
+               style={{
+                 backgroundImage: `url(https://image.tmdb.org/t/p/w500/${movie.poster_path})`,
+               }}
             ></Blurred>
                 <Card key={movie.id}>
                     <MovieImage
