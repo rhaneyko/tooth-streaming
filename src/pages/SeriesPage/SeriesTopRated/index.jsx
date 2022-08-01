@@ -24,7 +24,7 @@ const TopRated = () => {
     <Container>
        <Carousel 
         showArrows={true} 
-        itemsToShow={3} 
+        itemsToShow={4} 
         itemsToScroll={1} 
         disableArrowsOnEnd 
         enableAutoPlay 

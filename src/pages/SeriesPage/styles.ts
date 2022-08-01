@@ -4,21 +4,16 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding-top: 50px;
 `;
 
 export const SeriesContainer = styled.div`
     display: flex;
     flex-direction: column;
+
     justify-content: center;
-
-    background-color: red;
-
-    h1{
-     color: white;
-    }
+    align-items: center;
 `;
 
 export const Title = styled.h1``;
-
-

@@ -10,7 +10,7 @@ import {
     MoviesImage, 
 } from './styles';
 
-const SeriesLatest = () => {
+const MovieLatest = () => {
   const [movies, setMovies] = useState([]);
   
   useEffect(() => {
@@ -32,7 +32,7 @@ const SeriesLatest = () => {
          autoPlaySpeed={5000}>
       {movies &&
         movies.map((movie) => (
-          <Card >
+          <Card key={movie.id}>
             <Link to={`/movies${movie.id}`}>
               <MoviesImage
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
@@ -45,4 +45,4 @@ const SeriesLatest = () => {
   );
 };
 
-export default SeriesLatest;
+export default MovieLatest;

@@ -5,10 +5,8 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: center;
 
-    width: 700px;
+    width: 900px;
     height: 350px;
-
-    background-color: red;
 
     .rec.rec-arrow {
       border-radius: 50px;
