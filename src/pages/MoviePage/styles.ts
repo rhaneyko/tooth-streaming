@@ -15,9 +15,6 @@ export const MoviesContainer = styled.div`
     align-items: center;
 
     padding-top: 50px;
-
-    background-color: red;
-    
 `;
 
 export const Title = styled.h1``;
