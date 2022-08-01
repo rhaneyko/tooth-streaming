@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 700px;
     height: 350px;
 
     justify-content: center;
+
+    background-color: red;
 
     .rec.rec-arrow {
       border-radius: 50px;

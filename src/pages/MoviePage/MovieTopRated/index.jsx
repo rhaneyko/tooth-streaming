@@ -14,7 +14,7 @@ const MovieTopRated = () => {
   const [series, setSeries] = useState([]);
   useEffect(() => {
     fetch(
-      'https://api.themoviedb.org/3/tv/top_rated?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
+      'https://api.themoviedb.org/3/movie/top_rated?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
     )
       .then((response) => response.json())
       .then((json) => setSeries(json.results));
@@ -24,7 +24,7 @@ const MovieTopRated = () => {
     <Container>
        <Carousel 
         showArrows={true} 
-        itemsToShow={3} 
+        itemsToShow={4} 
         itemsToScroll={1} 
         disableArrowsOnEnd 
         enableAutoPlay 

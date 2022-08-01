@@ -6,6 +6,7 @@ import {
   Title, 
 } from './styles';
 
+
 import MoviePopular from './MoviePopular'
 import MovieTopRated from './MovieTopRated';
 import MovieLatest from './MovieLatest';
