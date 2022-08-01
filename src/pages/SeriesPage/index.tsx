@@ -1,12 +1,25 @@
-import { SeriesContainer } from "./styles";
+//import SeriesCard from './SeriesCard';
+import SeriesLatest from './SeriesLatest';
+import SeriesPopular from './SeriesPopular';
+import SeriesTopRated from './SeriesTopRated';
+
+import { 
+  Container, 
+ 
+  SeriesContainer,
+  Title,
+} from './styles';
 
 const SeriesPage = () => {
   return (
-    <>
-      <SeriesContainer>
-        <h1>seriespage</h1>
-      </SeriesContainer>
-    </>
+    <Container>
+       <SeriesContainer>
+          <Title>Popular Series</Title>
+          <SeriesPopular/>
+          <SeriesTopRated/>
+          <SeriesLatest/>
+       </SeriesContainer>
+    </Container>
   );
 };
 
