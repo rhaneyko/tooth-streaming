@@ -11,8 +11,8 @@ export const SeriesContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-    height: 300px;
+
+    background-color: red;
 
     h1{
      color: white;

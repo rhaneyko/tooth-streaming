@@ -16,7 +16,9 @@ const SeriesPage = () => {
        <SeriesContainer>
           <Title>Popular Series</Title>
           <SeriesPopular/>
+          <Title>Top Rated Series</Title>
           <SeriesTopRated/>
+          <Title>Latest Series</Title>
           <SeriesLatest/>
        </SeriesContainer>
     </Container>

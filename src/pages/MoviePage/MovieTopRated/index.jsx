@@ -7,14 +7,14 @@ import Carousel from 'react-elastic-carousel';
 import { 
     Container, 
     Card, 
-    SeriesImage, 
+    MovieImage, 
 } from './styles';
 
-const SeriesLatest = () => {
+const MovieTopRated = () => {
   const [series, setSeries] = useState([]);
   useEffect(() => {
     fetch(
-      'https://api.themoviedb.org/3/tv/latest?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
+      'https://api.themoviedb.org/3/tv/top_rated?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
     )
       .then((response) => response.json())
       .then((json) => setSeries(json.results));
@@ -30,11 +30,11 @@ const SeriesLatest = () => {
         enableAutoPlay 
         autoPlaySpeed={5000}>
       {series &&
-        series.map((serie) => (
-          <Card key={serie.id}>
-            <Link to={`/series${serie.id}`}>
-              <SeriesImage
-                src={`https://image.tmdb.org/t/p/w500/${serie.poster_path}`}
+        series.map((series) => (
+          <Card key={series.id}>
+            <Link to={`/movies${series.id}`}>
+              <MovieImage
+                src={`https://image.tmdb.org/t/p/w500/${series.poster_path}`}
               />
             </Link>
           </Card>
@@ -44,4 +44,4 @@ const SeriesLatest = () => {
   );
 };
 
-export default SeriesLatest;
+export default MovieTopRated;
