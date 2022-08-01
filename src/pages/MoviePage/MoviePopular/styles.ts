@@ -9,8 +9,6 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
 
-    background-color: white;
-
     .rec.rec-arrow {
       border-radius: 50px;
       border: #212329 solid 1px;

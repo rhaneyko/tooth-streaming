@@ -4,7 +4,6 @@ import Carousel from 'react-elastic-carousel'
 import {
     Container,
     Card,
-    Blurred,
     MovieImage,
     Content,
     Info,
@@ -14,7 +13,7 @@ import {
     ButtonText,
 } from './styles'
 
-//import { key, upcomingMovies } from '../../../services/api'
+
 
 const MovieUpcoming = () => {
     const [upcoming, setUpcoming] = useState([]);
@@ -43,12 +42,6 @@ const MovieUpcoming = () => {
                 autoPlaySpeed={5000}>
             {upcoming &&
             upcoming.map(movie => (
-            <>
-             <Blurred
-               style={{
-                 backgroundImage: `url(https://image.tmdb.org/t/p/w500/${movie.poster_path})`,
-               }}
-            ></Blurred>
                 <Card key={movie.id}>
                     <MovieImage
                         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -62,7 +55,7 @@ const MovieUpcoming = () => {
                             <ButtonText>Assistir Trailer</ButtonText>
                         </ButtonTrailer>
                     </Content>
-                </Card></>
+                </Card>
             ))}
          </Carousel>
         </Container>
