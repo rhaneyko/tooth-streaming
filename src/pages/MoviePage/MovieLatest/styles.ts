@@ -40,7 +40,7 @@ export const Card = styled.div`
     height: 273px;
 `;
 
-export const SeriesImage = styled.img`
+export const MoviesImage = styled.img`
     display: flex;
 
     width: 180px;

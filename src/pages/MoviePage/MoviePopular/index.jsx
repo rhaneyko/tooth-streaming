@@ -69,9 +69,7 @@ const MoviePopular = () => {
                     <Overview>
                       {movie.overview}
                     </Overview>
-                    <Genres
-                      
-                    >
+                    <Genres>
                       {genres &&
                         genres.map((genre) => (
                           movie.genre_ids.includes(genre.id) && (
