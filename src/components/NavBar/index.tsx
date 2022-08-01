@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Link, useNavigate } from 'react-router-dom';
-import { NavHashLink } from 'react-router-hash-link';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import { Bars, Container, Nav, Logo } from './styles';
 
@@ -22,11 +21,11 @@ const NavBar = () => {
       <Logo>LOGO</Logo>
       <Router>
         <Bars onClick={navToggle} className={icon} />
-        <Nav className={active}>
-          <Link to={'/'}>Home</Link>
-          <Link to={'/movies'}>Filmes</Link>
-          <Link to={'/series'}>Series</Link>
-        </Nav>
+         <Nav className={active}>
+           <Link to={'/'}>Home</Link>
+           <Link to={'/movies'}>Filmes</Link>
+           <Link to={'/series'}>Series</Link>
+         </Nav>
       </Router>
     </Container>
   );
