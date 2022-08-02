@@ -36,7 +36,7 @@ export const Container = styled.div`
 
 export const Blurred = styled.div`
     display: flex;
-    width: 100%;
+    width: 80%;
     height: 320px;
     
 
@@ -55,7 +55,7 @@ export const Card = styled.div`
 
     align-items: center;
 
-    width: 700px;
+    width: 500px;
     height: 300px;
 
     align-items: center;
@@ -77,10 +77,11 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     
-    width: 400px;
-    height: 300px;
+    width: 200px;
+    height: 250px;
 
     align-items: center;
+    justify-content: center;
 
     border-radius: 20px;
     
@@ -92,8 +93,10 @@ export const Info = styled.div`
     display: flex;
     flex-direction: column;
 
+    align-items: center;
+    justify-content: center;
     
-    width: 400px;
+    width: 200px;
     height: 300px;
 
     padding: 5px 10px 0 10px;
@@ -101,8 +104,9 @@ export const Info = styled.div`
 
 export const MovieTitle = styled.h1`
     color: white;
-    
     font-size: 20px;
+
+    margin-bottom: 180px;
 `;
 
 export const Overview = styled.p`
@@ -116,9 +120,12 @@ export const Overview = styled.p`
 
 export const Genres = styled.div`
    display: flex;
-   position: absolute;
+   flex-direction: column;
 
-   margin-top: 230px;
+   align-items: center;
+   justify-content: center;
+   
+   position: absolute;
 
   p {
     margin: 20px 10px 0 0;

@@ -14,6 +14,7 @@ export const SeriesContainer = styled.div`
 
     justify-content: center;
     align-items: center;
+    
 `;
 
 export const Title = styled.h1`

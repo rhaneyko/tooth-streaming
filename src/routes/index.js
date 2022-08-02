@@ -12,8 +12,8 @@ const RoutesApp = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/movies" element={<MoviePage />} />
+        <Route exact path="/" element={<HomePage />} />
+        <Route  path="/movies" element={<MoviePage />} />
         <Route path="/movies/:id" element={<MovieDetail />} />
         <Route path="/series" element={<SeriesPage />} />
         <Route path="/series/:id" element={<SeriesDetail />} />

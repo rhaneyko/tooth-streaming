@@ -9,7 +9,7 @@ import {
 
 import MoviePopular from './MoviePopular'
 import MovieTopRated from './MovieTopRated';
-import MovieLatest from './MovieLatest';
+
 import MovieUpcoming from './MovieUpcoming';
 
 const MoviePage = () => {
@@ -20,8 +20,6 @@ const MoviePage = () => {
          <MoviePopular/>
         <Title>Top Rated Movies</Title>
          <MovieTopRated/>
-        <Title>Latest Movies</Title>
-         <MovieLatest/>
         <Title>Upcoming Movies</Title>
         <MovieUpcoming/>
       </MoviesContainer>

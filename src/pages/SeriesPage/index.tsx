@@ -1,5 +1,3 @@
-//import SeriesCard from './SeriesCard';
-import SeriesLatest from './SeriesLatest';
 import SeriesPopular from './SeriesPopular';
 import SeriesTopRated from './SeriesTopRated';
 
@@ -18,8 +16,6 @@ const SeriesPage = () => {
           <SeriesPopular/>
           <Title>Top Rated Series</Title>
           <SeriesTopRated/>
-          <Title>Latest Series</Title>
-          <SeriesLatest/>
        </SeriesContainer>
     </Container>
   );

@@ -11,7 +11,6 @@ import {
   Content, 
   Info, 
   MovieTitle, 
-  Overview, 
   Genres,
  } from './styles';
 
@@ -38,7 +37,13 @@ const SeriesPopular = () => {
 
   return (
     <Container>
-      <Carousel showArrows={true} itemsToShow={1} itemsToScroll={1} disableArrowsOnEnd autoPlaySpeed={5000} enableAutoPlay
+      <Carousel 
+       showArrows={true} 
+       itemsToShow={1} 
+       itemsToScroll={1} 
+       disableArrowsOnEnd 
+       autoPlaySpeed={5000} 
+       enableAutoPlay
       >
         {series &&
           series.map((series) => (
@@ -55,9 +60,6 @@ const SeriesPopular = () => {
                     <MovieTitle>
                       {series.name}
                     </MovieTitle>
-                    <Overview>
-                      {series.overview}
-                    </Overview>
                     <Genres
                       
                     >
