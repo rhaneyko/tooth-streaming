@@ -4,7 +4,9 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
 
-    justify-content: space-between;
+    justify-content: center;
+
+    background-color: red;
 
     width: 100%;
     height: 100vh;
@@ -15,8 +17,9 @@ export const Container = styled.div`
 export const SideLeft = styled.div`
     display: flex;
     flex-direction: column;
-
-    width: 25%;
+    
+    width: 300px;
+    
     height: 750px;
 
     border:1px solid white;
@@ -25,17 +28,18 @@ export const SideLeft = styled.div`
 export const SideCenter = styled.div`
     display: flex;
     flex-direction: column;
-
+    
     align-items: center;
-   
-    width: 47%;
+    
+    width: 950px;
+
+    margin: 0 20px 0 20px;
 `;
 
 export const SideRight = styled.div`
     display: flex;
     flex-direction: column;
     
-    width: 500px;
     height: 750px;
 `;
 
@@ -48,9 +52,10 @@ export const PopularMoviesContainer = styled.div`
     display: flex;
     flex-direction: column;
 
+    justify-content: center;
     align-items: center;
 
-    height: 450px;
+    height: 550px;
 `;
 
 export const ScrollMovies = styled.div`
