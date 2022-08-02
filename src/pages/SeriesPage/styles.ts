@@ -16,4 +16,8 @@ export const SeriesContainer = styled.div`
     align-items: center;
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+    font-size: 28px;
+    color: #FFF;
+    
+`;

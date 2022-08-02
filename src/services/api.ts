@@ -31,3 +31,7 @@ export const upcomingMovies = axios.create({
 export const imagesMovies = axios.create({
   baseURL: `https://image.tmdb.org/t/p/w500`
 });
+
+export const apiSeries = axios.create({
+  baseURL: `https://api.themoviedb.org/3/tv/popular?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR`
+})

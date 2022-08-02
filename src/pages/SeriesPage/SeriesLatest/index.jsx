@@ -24,17 +24,17 @@ const SeriesLatest = () => {
     <Container>
        <Carousel 
         showArrows={true} 
-        itemsToShow={3} 
+        itemsToShow={4} 
         itemsToScroll={1} 
         disableArrowsOnEnd 
         enableAutoPlay 
         autoPlaySpeed={5000}>
       {series &&
-        series.map((serie) => (
-          <Card key={serie.id}>
-            <Link to={`/series${serie.id}`}>
+        series.map((series) => (
+          <Card key={series.id}>
+            <Link to={`/series${series.id}`}>
               <SeriesImage
-                src={`https://image.tmdb.org/t/p/w500/${serie.poster_path}`}
+                src={`https://image.tmdb.org/t/p/w500/${series.poster_path}`}
               />
             </Link>
           </Card>

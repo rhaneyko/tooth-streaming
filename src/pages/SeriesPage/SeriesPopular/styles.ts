@@ -66,7 +66,7 @@ export const Card = styled.div`
     z-index: 2;
 `;
 
-export const MovieImage = styled.img`
+export const SeriesImage = styled.img`
     width: 180px;
     height: 273px;
 
@@ -97,17 +97,12 @@ export const Info = styled.div`
     height: 300px;
 
     padding: 5px 10px 0 10px;
-    `;
+`;
 
 export const MovieTitle = styled.h1`
     color: white;
     
     font-size: 20px;
-    `;
-
-export const ReleaseDate = styled.p`
-    color: white;
-    font-size: 17px;
 `;
 
 export const Overview = styled.p`

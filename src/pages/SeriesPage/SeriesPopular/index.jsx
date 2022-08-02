@@ -7,74 +7,63 @@ import {
   Container, 
   Blurred,
   Card, 
-  MovieImage, 
+  SeriesImage, 
   Content, 
   Info, 
   MovieTitle, 
-  ReleaseDate, 
   Overview, 
   Genres,
  } from './styles';
 
 
 const SeriesPopular = () => {
-  const [movies, setMovies] = useState([]);
+  const [series, setSeries] = useState([]);
   useEffect(() => {
     fetch(
-      'https://api.themoviedb.org/3/movie/popular?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
+      'https://api.themoviedb.org/3/tv/popular?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
     )
       .then((response) => response.json())
-      .then((json) => setMovies(json.results));
+      .then((json) => setSeries(json.results));
   }, 
   []);
 
    const [ genres, setGenres ] = useState([]);
    useEffect(() => {
      fetch(
-       'https://api.themoviedb.org/3/genre/movie/list?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
+       'https://api.themoviedb.org/3/genre/tv/list?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
      )
        .then((response) => response.json())
        .then((json) => setGenres(json.genres));
    }, []);
-  
-  const dataFormat = (date) => {
-    const dateFormat = new Date(date);
-    const year = dateFormat.getFullYear();
-    return `${year}`;
-  }
-
 
   return (
     <Container>
       <Carousel showArrows={true} itemsToShow={1} itemsToScroll={1} disableArrowsOnEnd autoPlaySpeed={5000} enableAutoPlay
       >
-        {movies &&
-          movies.map((movie) => (
+        {series &&
+          series.map((series) => (
             <><Blurred
               style={{
-                backgroundImage: `url(https://image.tmdb.org/t/p/w500/${movie.poster_path})`,
+                backgroundImage: `url(https://image.tmdb.org/t/p/w500/${series.poster_path})`,
               }}
-            ></Blurred><Card key={movie.id}
+            ></Blurred><Card key={series.id}
             >
-                <MovieImage
-                  src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
+                <SeriesImage
+                  src={`https://image.tmdb.org/t/p/w500/${series.poster_path}`} />
                 <Content>
                   <Info>
                     <MovieTitle>
-                      {movie.title}
+                      {series.name}
                     </MovieTitle>
-                    <ReleaseDate>
-                      {dataFormat(movie.release_date)}
-                    </ReleaseDate>
                     <Overview>
-                      {movie.overview}
+                      {series.overview}
                     </Overview>
                     <Genres
                       
                     >
                       {genres &&
                         genres.map((genre) => (
-                          movie.genre_ids.includes(genre.id) && (
+                          series.genre_ids.includes(genre.id) && (
                             <p key={genre.id}>{genre.name}</p>
                           )
                         ))}
