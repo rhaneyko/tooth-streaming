@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Carousel from 'react-elastic-carousel'
 
 import {
     Container,
@@ -15,8 +14,8 @@ import {
 
 
 
-const MovieUpcoming = () => {
-    const [upcoming, setUpcoming] = useState([]);
+const MovieUpcoming: React.FC = () => {
+    const [upcoming, setUpcoming] = useState<any[]>();
 
     useEffect(() => {
         fetch(
@@ -26,14 +25,13 @@ const MovieUpcoming = () => {
             .then(json => setUpcoming(json.results));
        }, [])
 
-       const formatDate = (date) => {
-        const dateFormated = new Date(date);
-        return dateFormated.toLocaleDateString('pt-BR');
+       const formateDate = (date: number) => {
+         const dateFormate = new Date(date);
+         return dateFormate.toLocaleDateString('pt-BR');
        }
 
     return (
         <Container>
-           
             {upcoming &&
             upcoming.map(movie => (
                 <Card key={movie.id}>
@@ -43,7 +41,7 @@ const MovieUpcoming = () => {
                     <Content>
                       <Info>
                         <MovieTitle>{movie.title}</MovieTitle>
-                        <ReleaseDate>Data de lançamento: {formatDate(movie.release_date)}</ReleaseDate>
+                        <ReleaseDate>Data de lançamento: {formateDate(movie.release_date)}</ReleaseDate>
                       </Info>
                         <ButtonTrailer>
                             <ButtonText>Assistir Trailer</ButtonText>
