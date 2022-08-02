@@ -6,7 +6,7 @@ export const Container = styled.div`
 
     align-items: center;
 
-    width: 800px;
+    width: 450px;
     height: 800px;
 
     margin-top: 10px;
@@ -20,6 +20,21 @@ export const Container = styled.div`
      background-color: #F0F0F0;
      border-radius: 5px;
     }
+`;
+
+export const Blurred = styled.div`
+    display: flex;
+    width: 100%;
+    height: 320px;
+    
+
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
 `;
 
 export const Card = styled.div`

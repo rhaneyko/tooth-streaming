@@ -75,5 +75,20 @@ export const TopRatedContainer = styled.div`
 
 `;
 
+export const TopRatedContainerSeries = styled.div`
+    display: flex;
+    flex-direction: column;
 
+    align-items: center;
+    justify-content: center;
 
+`;
+
+export const PopularSeriesContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    height: 450px;
+`;

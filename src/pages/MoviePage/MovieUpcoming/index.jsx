@@ -33,13 +33,7 @@ const MovieUpcoming = () => {
 
     return (
         <Container>
-            <Carousel
-                showArrows={true} 
-                itemsToShow={1} 
-                itemsToScroll={1} 
-                disableArrowsOnEnd 
-                enableAutoPlay 
-                autoPlaySpeed={5000}>
+           
             {upcoming &&
             upcoming.map(movie => (
                 <Card key={movie.id}>
@@ -57,7 +51,6 @@ const MovieUpcoming = () => {
                     </Content>
                 </Card>
             ))}
-         </Carousel>
         </Container>
     )
 }

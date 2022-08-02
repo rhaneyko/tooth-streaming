@@ -10,11 +10,16 @@ import {
   ScrollMovies,
   UpcomingContainer, 
   TopRatedContainer,
+  TopRatedContainerSeries,
+  PopularSeriesContainer,
 } from './styles';
 
-import PopularMovieCard from './PopularMovieCard';
-import Upcoming from './Upcoming';
-import TopRated from './TopRated';
+
+import MovieUpcoming from '../MoviePage/MovieUpcoming';
+import MovieTopRated from '../MoviePage/MovieTopRated';
+import MoviePopular from '../MoviePage/MoviePopular';
+import SeriesTopRated from '../SeriesPage/SeriesTopRated';
+import SeriesPopular from '../SeriesPage/SeriesPopular';
 
 const HomePage = () => {
   return (
@@ -24,19 +29,30 @@ const HomePage = () => {
         <PopularMoviesContainer>
           <Title>Filmes populares</Title>
           <ScrollMovies>
-            <PopularMovieCard />
+            <MoviePopular />
           </ScrollMovies>
         </PopularMoviesContainer>
+
         <TopRatedContainer>
-        <Title>Melhores avaliados</Title>
-          <TopRated/>
+         <Title>Melhores filmes avaliados</Title>
+           <MovieTopRated/>
         </TopRatedContainer> 
 
+        <PopularSeriesContainer>
+          <Title>Series populares</Title>
+            <SeriesPopular />
+        </PopularSeriesContainer>
+
+        <TopRatedContainerSeries>
+          <Title>Melhores series avaliadas</Title>
+          <SeriesTopRated/>
+        </TopRatedContainerSeries>
       </SideCenter>
+
       <SideRight>
         <UpcomingContainer>
-        <Title>Irão ser lançados</Title>
-          <Upcoming />
+          <Title>Filmes que irão ser lançados</Title>
+          <MovieUpcoming />
         </UpcomingContainer>
       </SideRight>
     </Container>
