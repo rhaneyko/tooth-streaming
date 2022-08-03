@@ -4,9 +4,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
 
-    justify-content: center;
-
-    background-color: red;
+    justify-content: space-between;
 
     width: 100%;
     height: 100vh;
@@ -18,7 +16,7 @@ export const SideLeft = styled.div`
     display: flex;
     flex-direction: column;
     
-    width: 300px;
+    width: 430px;
     
     height: 750px;
 

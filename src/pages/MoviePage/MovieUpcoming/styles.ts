@@ -6,12 +6,11 @@ export const Container = styled.div`
 
     align-items: center;
 
-    width: 450px;
+    width: 430px;
     height: 800px;
 
     margin-top: 10px;
     overflow-y: scroll;
-
 
     &::-webkit-scrollbar {
      width: 7px;
