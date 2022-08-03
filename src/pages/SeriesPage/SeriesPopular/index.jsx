@@ -10,7 +10,7 @@ import {
   SeriesImage, 
   Content, 
   Info, 
-  MovieTitle, 
+  SeriesTitle, 
   Genres,
  } from './styles';
 
@@ -63,15 +63,17 @@ const SeriesPopular = () => {
               style={{
                 backgroundImage: `url(https://image.tmdb.org/t/p/w500/${series.poster_path})`,
               }}
-            ></Blurred><Card key={series.id}
-            >
+            ></Blurred>
+            
+            <Card key={series.id}>
                 <SeriesImage
-                  src={`https://image.tmdb.org/t/p/w500/${series.poster_path}`} />
+                  src={`https://image.tmdb.org/t/p/w500/${series.poster_path}`} 
+                />
                 <Content>
                   <Info>
-                    <MovieTitle>
+                    <SeriesTitle>
                       {series.name}
-                    </MovieTitle>
+                    </SeriesTitle>
                     <Genres
                       
                     >

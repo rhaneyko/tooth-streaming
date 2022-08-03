@@ -32,7 +32,7 @@ export const Card = styled.div`
     height: 273px;
     `;
 
-export const MovieImage = styled.img`
+export const SeriesImage = styled.img`
     width: 180px;
     height: 273px;
 `;

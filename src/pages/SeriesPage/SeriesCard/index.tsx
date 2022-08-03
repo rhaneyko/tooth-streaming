@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from "react";
 //import { Link } from "react-router-dom";
 
-import { Container, Card, MovieImage } from "./styles";
+import { Container, Card, SeriesImage } from "./styles";
 
 const SeriesCard = () => {
-  const [movies, setMovies] = useState<any[]>();
+  const [series, setSeries] = useState<any[]>();
   useEffect(() => {
     fetch(
       "https://api.themoviedb.org/3/tv/popular?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR"
     )
       .then((response) => response.json())
-      .then((json) => setMovies(json.results));
+      .then((json) => setSeries(json.results));
   }, []);
 
   return (
     <Container>
-      {movies &&
-        movies.map((movie) => (
-          <Card key={movie.id}>
-            {/* <Link to={`/movies${movie.id}`}> */}
-            <MovieImage
-              src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+      {series &&
+        series.map((series) => (
+          <Card key={series.id}>
+            {/* <Link to={`/series${series.id}`}> */}
+            <SeriesImage
+              src={`https://image.tmdb.org/t/p/w500/${series.poster_path}`}
             />
             {/* </Link> */}
           </Card>

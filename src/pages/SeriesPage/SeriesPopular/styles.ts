@@ -102,7 +102,7 @@ export const Info = styled.div`
     padding: 5px 10px 0 10px;
 `;
 
-export const MovieTitle = styled.h1`
+export const SeriesTitle = styled.h1`
     color: white;
     font-size: 20px;
 

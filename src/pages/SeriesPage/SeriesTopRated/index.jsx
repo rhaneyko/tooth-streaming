@@ -8,7 +8,7 @@ import Carousel from 'react-elastic-carousel';
 import { 
     Container, 
     Card, 
-    MovieImage, 
+    SeriesImage, 
 } from './styles';
 
 const TopRated = () => {
@@ -45,8 +45,8 @@ const TopRated = () => {
       {series &&
         series.map((series) => (
           <Card key={series.id}>
-            {/* <Link to={`/movies${series.id}`}> */}
-              <MovieImage
+            {/* <Link to={`/series${series.id}`}> */}
+              <SeriesImage
                 src={`https://image.tmdb.org/t/p/w500/${series.poster_path}`}
               />
             {/* </Link> */}
