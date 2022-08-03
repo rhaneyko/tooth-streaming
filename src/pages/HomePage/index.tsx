@@ -20,11 +20,14 @@ import MovieTopRated from '../MoviePage/MovieTopRated';
 import MoviePopular from '../MoviePage/MoviePopular';
 import SeriesTopRated from '../SeriesPage/SeriesTopRated';
 import SeriesPopular from '../SeriesPage/SeriesPopular';
+import SideBar from '../../components/SideBar';
 
 const HomePage = () => {
   return (
     <Container>
-      <SideLeft></SideLeft>
+      <SideLeft>
+        <SideBar/>
+      </SideLeft>
       <SideCenter>
           <Title>Filmes populares</Title>
         <PopularMoviesContainer>
