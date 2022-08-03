@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Carousel from 'react-elastic-carousel';
     
 //import { Link } from 'react-router-dom';
@@ -34,17 +34,29 @@ const SeriesPopular = () => {
        .then((response) => response.json())
        .then((json) => setGenres(json.genres));
    }, []);
-
-  return (
-    <Container>
-      <Carousel 
-       showArrows={true} 
-       itemsToShow={1} 
-       itemsToScroll={1} 
-       disableArrowsOnEnd 
-       autoPlaySpeed={5000} 
-       enableAutoPlay
-      >
+   
+  const itemsPerPage = 1
+  const items = [...series];
+  const ref = useRef(null);
+  const totalPages = Math.ceil(items.length / itemsPerPage)
+  let resetTimeout;
+  
+    return (
+      <Container>
+        <Carousel 
+          ref={ref}
+          enableAutoPlay
+          autoPlaySpeed={5000}
+          onNextEnd={({ index }) => {
+                clearTimeout(resetTimeout)
+                if (index + 1 === totalPages) {
+                   resetTimeout = setTimeout(() => {
+                      ref.current.goTo(0)
+                  }, 5000)
+                }
+           }} 
+          itemsToShow={1}
+        >
         {series &&
           series.map((series) => (
             <><Blurred

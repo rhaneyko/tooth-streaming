@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Carousel from 'react-elastic-carousel';
     
 //import { Link } from 'react-router-dom';
@@ -43,16 +43,27 @@ const MoviePopular = () => {
     return `${year}`;
   }
 
+const itemsPerPage = 1
+const items = [...movies];
+const ref = useRef(null);
+const totalPages = Math.ceil(items.length / itemsPerPage)
+let resetTimeout;
 
   return (
     <Container>
       <Carousel 
-      showArrows={true} 
-      itemsToShow={1} 
-      itemsToScroll={1} 
-      disableArrowsOnEnd 
-      autoPlaySpeed={5000} 
-      enableAutoPlay
+        ref={ref}
+        enableAutoPlay
+        autoPlaySpeed={5000}
+        onNextEnd={({ index }) => {
+              clearTimeout(resetTimeout)
+              if (index + 1 === totalPages) {
+                 resetTimeout = setTimeout(() => {
+                    ref.current.goTo(0)
+                }, 5000)
+              }
+         }} 
+        itemsToShow={itemsPerPage}
       >
         {movies &&
           movies.map((movie) => (
@@ -60,8 +71,8 @@ const MoviePopular = () => {
               style={{
                 backgroundImage: `url(https://image.tmdb.org/t/p/w500/${movie.poster_path})`,
               }}
-            ></Blurred><Card key={movie.id}
-            >
+            ></Blurred>
+            <Card key={movie.id}>
                 <MovieImage
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
                 <Content>

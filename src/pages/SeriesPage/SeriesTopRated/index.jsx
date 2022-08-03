@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState, useRef } from 'react';
+
+// import { Link } from 'react-router-dom';
 
 
 import Carousel from 'react-elastic-carousel';
@@ -20,15 +21,28 @@ const TopRated = () => {
       .then((json) => setSeries(json.results));
   }, []);
 
-  return (
-    <Container>
-       <Carousel 
-        showArrows={true} 
-        itemsToShow={4} 
-        itemsToScroll={1} 
-        disableArrowsOnEnd 
-        enableAutoPlay 
-        autoPlaySpeed={5000}>
+  const itemsPerPage = 4
+  const items = [...series];
+  const ref = useRef(null);
+  const totalPages = Math.ceil(items.length / itemsPerPage)
+  let resetTimeout;
+  
+    return (
+      <Container>
+        <Carousel 
+          ref={ref}
+          enableAutoPlay
+          autoPlaySpeed={5000}
+          onNextEnd={({ index }) => {
+                clearTimeout(resetTimeout)
+                if (index + 1 === totalPages) {
+                   resetTimeout = setTimeout(() => {
+                      ref.current.goTo(0)
+                  }, 5000)
+                }
+           }} 
+          itemsToShow={itemsPerPage}
+        >
       {series &&
         series.map((series) => (
           <Card key={series.id}>
