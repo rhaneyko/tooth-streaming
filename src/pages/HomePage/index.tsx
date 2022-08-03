@@ -26,8 +26,8 @@ const HomePage = () => {
     <Container>
       <SideLeft></SideLeft>
       <SideCenter>
-        <PopularMoviesContainer>
           <Title>Filmes populares</Title>
+        <PopularMoviesContainer>
           <ScrollMovies>
             <MoviePopular />
           </ScrollMovies>

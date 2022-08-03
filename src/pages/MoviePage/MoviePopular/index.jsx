@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Carousel from 'react-elastic-carousel';
     
 //import { Link } from 'react-router-dom';
@@ -17,8 +17,11 @@ import {
  } from './styles';
 
 
-const MoviePopular = () => {
-  const [movies, setMovies] = useState([]);
+ 
+ const MoviePopular = () => {
+   const [movies, setMovies] = useState([]);
+   
+   
   useEffect(() => {
     fetch(
       'https://api.themoviedb.org/3/movie/popular?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
@@ -43,10 +46,27 @@ const MoviePopular = () => {
     return `${year}`;
   }
 
+ const carouselRef = useRef(null);
+ let resetTimeout;
+ const itemsPerSlide = 1;
+ const totalPages = Math.ceil(movies.length / itemsPerSlide);
 
   return (
     <Container>
-      <Carousel showArrows={true} itemsToShow={1} itemsToScroll={1} disableArrowsOnEnd autoPlaySpeed={5000} enableAutoPlay
+      <Carousel 
+      ref={carouselRef}
+      showArrows={true} 
+      
+      autoPlaySpeed={5000} 
+      enableAutoPlay
+      onNextEnd={({ index }) => {
+        clearTimeout(resetTimeout)
+        if (index + 1 === totalPages) {
+           resetTimeout = setTimeout(() => {
+              carouselRef.current.goTo(0)
+          }, 1500) // same time
+        }
+   }}
       >
         {movies &&
           movies.map((movie) => (

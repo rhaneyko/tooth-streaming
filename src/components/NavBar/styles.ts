@@ -19,6 +19,5 @@ export const Container = styled.header`
 
 export const Logo = styled.h1`
     color: #FFF;
-    margin-left: 40px;
 
 `;
