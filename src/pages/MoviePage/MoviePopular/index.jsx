@@ -61,13 +61,14 @@ const MoviePopular = () => {
           carouselRef?.current?.goTo(0)
         }, 4000)}}
         itemsToShow={4}>
+
         {movies &&
           movies.map((movie) => (
-            <><Blurred
-              style={{
-                backgroundImage: `url(https://image.tmdb.org/t/p/w500/${movie.poster_path})`,
-              }}
-            ></Blurred>
+        <>
+          <Blurred
+            style={{
+              backgroundImage: `url(https://image.tmdb.org/t/p/w500/${movie.poster_path})`,
+            }}></Blurred>
             <Card key={movie.id}>
                 <MovieImage
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
