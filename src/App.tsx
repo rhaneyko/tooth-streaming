@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import NavBar from './components/NavBar';
+import HomePage from './pages/HomePage';
 
 //import HomePage from './pages/MoviePage';
 import RoutesApp from './routes';
@@ -11,7 +12,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <NavBar />
-      <RoutesApp />
+      <HomePage />
       <GlobalStyles />
       
     </ThemeProvider>

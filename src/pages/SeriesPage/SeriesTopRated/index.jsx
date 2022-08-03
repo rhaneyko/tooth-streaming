@@ -32,11 +32,11 @@ const TopRated = () => {
       {series &&
         series.map((series) => (
           <Card key={series.id}>
-            <Link to={`/movies${series.id}`}>
+            {/* <Link to={`/movies${series.id}`}> */}
               <MovieImage
                 src={`https://image.tmdb.org/t/p/w500/${series.poster_path}`}
               />
-            </Link>
+            {/* </Link> */}
           </Card>
         ))}
       </Carousel>

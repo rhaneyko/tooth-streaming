@@ -19,11 +19,11 @@ const MovieCard = () => {
       {movies &&
         movies.map((movie) => (
           <Card key={movie.id}>
-            <Link to={`/movies${movie.id}`}>
+            {/* <Link to={`/movies${movie.id}`}> */}
               <MovieImage
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
               />
-            </Link>
+            {/* </Link> */}
           </Card>
         ))}
     </Container>
