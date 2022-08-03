@@ -20,23 +20,27 @@ const MovieTopRated = () => {
       .then((json) => setMovies(json.results));
   }, []);
 
-  const carouselRef = useRef(null);
+  const itemsPerPage = 4
+  const items = [...movies];
+  const ref = useRef(null);
+  const totalPages = Math.ceil(items.length / itemsPerPage)
   let resetTimeout;
   
-  return(
-    <Container>
-      <Carousel
-        ref={carouselRef}
-        pagination={false}
-        enableAutoPlay={true}
-        showArrows={true}
-        autoPlaySpeed={4000}
-        isRTL={false}
-        onNextEnd={({ index }) => {
-          clearTimeout(resetTimeout)
-          resetTimeout = setTimeout(() => {
-          carouselRef?.current?.goTo(0)
-        }, 4000)}}>
+    return (
+      <Container>
+        <Carousel 
+          ref={ref}
+          enableAutoPlay
+          autoPlaySpeed={5000}
+          onNextEnd={({ index }) => {
+                clearTimeout(resetTimeout)
+                if (index + 1 === totalPages) {
+                   resetTimeout = setTimeout(() => {
+                      ref.current.goTo(0)
+                  }, 5000)
+                }
+           }} 
+          itemsToShow={itemsPerPage}>
       {movies &&
         movies.map((movie) => (
           <Card key={movie.id}>
