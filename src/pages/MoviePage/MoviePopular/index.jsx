@@ -43,28 +43,24 @@ const MoviePopular = () => {
     return `${year}`;
   }
 
-const itemsPerPage = 1
-const items = [...movies];
-const ref = useRef(null);
-const totalPages = Math.ceil(items.length / itemsPerPage)
-let resetTimeout;
-
-  return (
+  const carouselRef = useRef(null);
+  let resetTimeout;
+  
+  return(
     <Container>
-      <Carousel 
-        ref={ref}
-        enableAutoPlay
-        autoPlaySpeed={5000}
+      <Carousel
+        ref={carouselRef}
+        pagination={false}
+        enableAutoPlay={true}
+        showArrows={true}
+        autoPlaySpeed={4000}
+        isRTL={false}
         onNextEnd={({ index }) => {
-              clearTimeout(resetTimeout)
-              if (index + 1 === totalPages) {
-                 resetTimeout = setTimeout(() => {
-                    ref.current.goTo(0)
-                }, 5000)
-              }
-         }} 
-        itemsToShow={itemsPerPage}
-      >
+          clearTimeout(resetTimeout)
+          resetTimeout = setTimeout(() => {
+          carouselRef?.current?.goTo(0)
+        }, 4000)}}
+        itemsToShow={4}>
         {movies &&
           movies.map((movie) => (
             <><Blurred

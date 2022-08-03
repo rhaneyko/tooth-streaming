@@ -41,8 +41,7 @@ const TopRated = () => {
                   }, 5000)
                 }
            }} 
-          itemsToShow={itemsPerPage}
-        >
+          itemsToShow={itemsPerPage}>
       {series &&
         series.map((series) => (
           <Card key={series.id}>
