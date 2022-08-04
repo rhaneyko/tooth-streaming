@@ -13,10 +13,14 @@ export const HeaderSideBar = styled.div`
     display: flex;
     flex-direction: row;
 
+    padding: 10px;
+
     width: 100%;
 `;
 
 export const Title = styled.h1`
     color: #FFF;
+
+    margin-left: 15px;
 `;
 
