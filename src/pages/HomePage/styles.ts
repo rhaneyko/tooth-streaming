@@ -17,8 +17,6 @@ export const SideLeft = styled.div`
     flex-direction: column;
     
     width: 430px;
-
-    background-color: white;
 `;
 
 export const SideCenter = styled.div`

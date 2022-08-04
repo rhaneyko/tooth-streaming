@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   padding: 10px;
@@ -11,31 +11,35 @@ export const Container = styled.header`
   left: 0;
   width: 100%;
   max-width: 1904px;
+
+  padding: 20px 910px 20px  100px;
   
   @media (max-width: 768px) {
     padding-left: 10px;
   }
 
   .nav_menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav_toggler {
-  font-size: 20px;
-  display: flex;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav_toggler {
+    display: flex;
+    font-size: 20px;
+  }
 
   .nav_toggler {
     display: flex;
   }
+
   .nav_menu {
-    width: 486px;
+    width: 300px;
     height: 929px;
 
     flex-direction: column;
 
-    right: 0;
+    right: 100%;
     top: 0;
       
     position: absolute;
@@ -43,14 +47,15 @@ export const Container = styled.header`
     background-color: #210124;
 
     transform: translateX(100%);
-    transition: 0.5s;
+    transition: 1s;
     z-index: 999;
 
     @media (max-width: 768px) {
-      right: 0;
+      left: 0;
       width: 380px;
     }
   }
+
   .nav_active {
     transform: translateX(0);
 
@@ -62,5 +67,4 @@ export const Container = styled.header`
 
 export const Logo = styled.h1`
     color: #FFF;
-
 `;

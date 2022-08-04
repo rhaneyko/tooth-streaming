@@ -26,7 +26,6 @@ const HomePage = () => {
   return (
     <Container>
       <SideLeft>
-        <SideBar/>
       </SideLeft>
       <SideCenter>
           <Title>Filmes populares</Title>
