@@ -7,10 +7,6 @@ export const Container = styled.div`
 
     width: 250px;
     height: 100%;
-    
-
-    background-color: blue;
-
 `;
 
 export const HeaderSideBar = styled.div`
@@ -18,10 +14,9 @@ export const HeaderSideBar = styled.div`
     flex-direction: row;
 
     width: 100%;
-
-
-    background-color: red;
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+    color: #FFF;
+`;
 

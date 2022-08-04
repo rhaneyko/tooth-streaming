@@ -19,11 +19,11 @@ const SideBar: React.FC<Props> = ({closeSideBar}) => {
          <HeaderSideBar>
             <AiOutlineClose
               size={30}
-              color='#210124'
+              color='#FFF'
               onClick={closeSideBar}
-          />
-         </HeaderSideBar>
+            />
             <Title>Side Bar</Title>
+         </HeaderSideBar>
         </Container>
     )
 }
