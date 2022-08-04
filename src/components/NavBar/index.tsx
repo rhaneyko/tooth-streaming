@@ -9,8 +9,13 @@ import {
 
 import { FaBars } from 'react-icons/fa';
 
-const NavBar: React.FC = () => {
+type Props = {
+    closeSideBar: () => void;
+}
+
+const NavBar: React.FC<Props> = () => {
   const [active, setActive] = useState('nav_menu');
+  
   const navToggle = () => {
     if (active === 'nav_menu') {
       setActive('nav_menu nav_active');

@@ -1,10 +1,9 @@
-import { type } from '@testing-library/user-event/dist/type';
 import { ThemeProvider } from 'styled-components';
 import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
 
 //import HomePage from './pages/MoviePage';
-import RoutesApp from './routes';
+//import RoutesApp from './routes';
 
 import GlobalStyles from './styles/GlobalStyles';
 import theme from './styles/theme/theme';
@@ -16,7 +15,9 @@ type Props = {
 const App: React.FC<Props> = ({closeSideBar}) => {
   return (
     <ThemeProvider theme={theme}>
-      <NavBar />
+      <NavBar 
+        closeSideBar={closeSideBar}
+      />
       <HomePage />
       <GlobalStyles />
       
