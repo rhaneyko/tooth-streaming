@@ -8,9 +8,7 @@ const PeoplePage = () => {
             .then(res => res.json())
             .then(data => setPeople(data.results))
     }, []);
-
-
-
+    
     return(
         <div>
             <h1>People</h1>
