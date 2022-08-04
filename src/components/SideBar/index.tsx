@@ -4,7 +4,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import {
     Container,
     HeaderSideBar,
-    Title
+    Title,
 } from './styles';
 
 

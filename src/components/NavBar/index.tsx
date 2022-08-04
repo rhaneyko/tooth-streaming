@@ -2,9 +2,10 @@ import { useState } from 'react';
 
 import SideBar from '../SideBar';
 
-import { Container, 
-         Logo 
-        } from './styles';
+import { 
+    Container, 
+    Logo,
+} from './styles';
 
 import { FaBars } from 'react-icons/fa';
 
