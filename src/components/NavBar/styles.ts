@@ -39,13 +39,16 @@ export const Container = styled.header`
 
     flex-direction: column;
 
-    
     left: 0;
     top: 0;
       
     position: absolute;
     
-    background-color: #210124;
+    background-color: #212329;
+
+    border-top-right-radius: 50px;
+
+    box-shadow: 20px 0px 20px rgba(0, 0, 0, 0.5);
 
     transform: translateX(-100%);
     transition: 1s;
