@@ -12,7 +12,7 @@ export const Container = styled.header`
   width: 100%;
   max-width: 1904px;
 
-  padding: 20px 910px 20px  100px;
+  padding: 20px 910px 20px  500px;
   
   @media (max-width: 768px) {
     padding-left: 10px;
@@ -30,7 +30,7 @@ export const Container = styled.header`
   }
 
   .nav_toggler {
-    display: flex;
+    display: none;
   }
 
   .nav_menu {
@@ -39,7 +39,8 @@ export const Container = styled.header`
 
     flex-direction: column;
 
-    right: 100%;
+    
+    right: 0;
     top: 0;
       
     position: absolute;

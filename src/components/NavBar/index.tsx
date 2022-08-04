@@ -34,7 +34,7 @@ const NavBar: React.FC<Props> = () => {
         <SideBar 
           closeSideBar={closeSide}
         />
-      </div>
+      </div> 
     </Container>
   );
 };
