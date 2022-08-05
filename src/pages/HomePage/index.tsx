@@ -26,9 +26,7 @@ import MovieTrailer from '../MoviePage/MovieTrailer';
 const HomePage = () => {
   return (
     <Container>
-      <SideLeft>
-        <MovieTrailer/>
-      </SideLeft>
+      <SideLeft></SideLeft>
       <SideCenter>
           <Title>Filmes populares</Title>
         <PopularMoviesContainer>
