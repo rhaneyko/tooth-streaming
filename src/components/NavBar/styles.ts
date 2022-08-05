@@ -46,6 +46,8 @@ export const Container = styled.header`
     
     background-color: #212329;
 
+    padding: 20px;
+
     border-top-right-radius: 50px;
 
     box-shadow: 20px 0px 20px rgba(0, 0, 0, 0.5);

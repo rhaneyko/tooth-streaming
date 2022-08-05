@@ -14,14 +14,12 @@ import {
   PopularSeriesContainer,
 } from './styles';
 
-
 import MovieUpcoming from '../MoviePage/MovieUpcoming';
 import MovieTopRated from '../MoviePage/MovieTopRated';
 import MoviePopular from '../MoviePage/MoviePopular';
 import SeriesTopRated from '../SeriesPage/SeriesTopRated';
 import SeriesPopular from '../SeriesPage/SeriesPopular';
-import SideBar from '../../components/SideBar';
-import MovieTrailer from '../MoviePage/MovieTrailer';
+
 
 const HomePage = () => {
   return (

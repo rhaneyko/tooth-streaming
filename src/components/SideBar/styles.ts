@@ -7,6 +7,8 @@ export const Container = styled.div`
 
     width: 250px;
     height: 100%;
+
+    background-color: red;
 `;
 
 export const HeaderSideBar = styled.div`
