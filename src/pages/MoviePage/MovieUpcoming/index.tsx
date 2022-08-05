@@ -25,10 +25,23 @@ const MovieUpcoming: React.FC = () => {
             .then(json => setUpcoming(json.results));
        }, [])
 
+       useEffect(() => {
+        fetch(
+            'https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
+        ).then(response => response.json())
+        .then(json => setUpcoming(json.results));
+       }, []);
+
        const formateDate = (date: number) => {
          const dateFormate = new Date(date);
          return dateFormate.toLocaleDateString('pt-BR');
        }
+
+       const watchTrailer = (id: number) => {
+        window.open(`https://www.youtube.com/watch?v=${id}`);
+         }
+
+       
 
     return (
         <Container>
@@ -43,7 +56,9 @@ const MovieUpcoming: React.FC = () => {
                         <MovieTitle>{movie.title}</MovieTitle>
                         <ReleaseDate>Data de lançamento: {formateDate(movie.release_date)}</ReleaseDate>
                       </Info>
-                        <ButtonTrailer>
+                        <ButtonTrailer
+                            onClick={() => watchTrailer(movie.id)}
+                        >
                             <ButtonText>Assistir Trailer</ButtonText>
                         </ButtonTrailer>
                     </Content>
