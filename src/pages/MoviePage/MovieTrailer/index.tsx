@@ -17,7 +17,7 @@ const MovieTrailer: React.FC = () => {
 
     return(
         <Container>
-           
+           <Title></Title>
         </Container>
     )
 }
