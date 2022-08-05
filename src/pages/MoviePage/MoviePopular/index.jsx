@@ -52,7 +52,6 @@ const MoviePopular = () => {
     return (
       <Container>
         <Carousel 
-          isRTL={false}
           ref={ref}
           enableAutoPlay
           autoPlaySpeed={5000}
