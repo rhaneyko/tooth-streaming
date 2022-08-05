@@ -24,7 +24,10 @@ import SeriesPopular from '../SeriesPage/SeriesPopular';
 const HomePage = () => {
   return (
     <Container>
-      <SideLeft></SideLeft>
+      <SideLeft>
+        <Title>Trailers</Title>
+        
+      </SideLeft>
       <SideCenter>
           <Title>Filmes populares</Title>
         <PopularMoviesContainer>
