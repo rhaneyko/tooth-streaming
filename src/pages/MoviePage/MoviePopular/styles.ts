@@ -9,6 +9,8 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
 
+    background-color: red;
+
     .rec.rec-arrow {
       border-radius: 50px;
       border: #212329 solid 1px;
@@ -30,7 +32,23 @@ export const Container = styled.div`
     }
 
     button.rec-dot{
-        display: none;
+        display: flex;
+    }
+    
+    .rec-dot_active {
+      background-color: #0065FF !important;
+      box-shadow: 0 0 1px 3px #0065FF !important;
+    }
+    
+    .rec-dot:focus,
+    .rec-dot:hover {
+      box-shadow: 0 0 1px 3px #0065FF !important;
+    }
+
+    .rec-dot_active:focus,
+    .rec-dot_active:hover {
+      background-color: #0065FF !important;
+      box-shadow: 0 0 1px 3px #0065FF !important;
     }
 `;
 
