@@ -30,7 +30,23 @@ export const Container = styled.div`
     }
 
     button.rec-dot{
-        display: none;
+        display: flex;
+    }
+
+    .rec-dot_active {
+      background-color: #FFF !important;
+      box-shadow: 0 0 1px 3px #FFF !important;
+    }
+    
+    .rec-dot:focus,
+    .rec-dot:hover {
+      box-shadow: 0 0 1px 3px #FFF !important;
+    }
+
+    .rec-dot_active:focus,
+    .rec-dot_active:hover {
+      background-color: #FFF !important;
+      box-shadow: 0 0 1px 3px #FFF !important;
     }
 `;
 
