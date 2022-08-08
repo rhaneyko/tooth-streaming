@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Carousel from 'react-elastic-carousel';
-    
-//import { Link } from 'react-router-dom';
 
 import { 
   Container, 
@@ -15,7 +13,6 @@ import {
   Overview, 
   Genres,
  } from './styles';
-
 
 const MoviePopular = () => {
   const [movies, setMovies] = useState([]);
