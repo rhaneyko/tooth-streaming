@@ -9,10 +9,11 @@ import {
 
 import { FaBars } from 'react-icons/fa';
 
-
 type Props = {
+    
     closeSideBar: () => void;
 }
+
 
 const NavBar: React.FC<Props> = () => {
   const [active, setActive] = useState('nav_menu');
@@ -31,11 +32,11 @@ const NavBar: React.FC<Props> = () => {
     <Container>
       <FaBars onClick={navToggle} color='#FFF'/>
       <Logo>LOGO</Logo>
-      <div className={active}>
-        <SideBar 
-          closeSideBar={closeSide}
-        />
-      </div> 
+       <div className={active}>
+         <SideBar 
+           closeSideBar={closeSide}
+         />
+       </div>  
     </Container>
   );
 };
