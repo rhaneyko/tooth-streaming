@@ -14,9 +14,6 @@ import {
   Genres,
  } from './styles';
 
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
-
 const MoviePopular = () => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
