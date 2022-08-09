@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player';
 
 import {
     Container,
-    NoTrailer,
+    //NoTrailer,
     Player,
 } from './styles'
 

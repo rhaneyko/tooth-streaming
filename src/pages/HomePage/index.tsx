@@ -19,14 +19,14 @@ import MovieTopRated from '../MoviePage/MovieTopRated';
 import MoviePopular from '../MoviePage/MoviePopular';
 import SeriesTopRated from '../SeriesPage/SeriesTopRated';
 import SeriesPopular from '../SeriesPage/SeriesPopular';
-import MovieTrailer from '../MoviePage/MovieTrailer';
+//import MovieTrailer from '../MoviePage/MovieTrailer';
 
 const HomePage = () => {
   return (
     <Container>
       <SideLeft>
-        <Title>Trailers</Title>
-         <MovieTrailer/>
+        {/* <Title>Trailers</Title>
+         <MovieTrailer/> */}
       </SideLeft>
       <SideCenter>
           <Title>Filmes populares</Title>
