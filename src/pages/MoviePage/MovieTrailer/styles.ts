@@ -28,8 +28,8 @@ export const Player = styled.div`
     display: flex;
     background-color: white;
 
-    width: 400px;
-    height: 200px;
+    width: 100%;
+    height: 480px;
 
     background-color: #FFF;
 `;

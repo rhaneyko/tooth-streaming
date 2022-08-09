@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 //import { Link } from 'react-router-dom';
 
-import { Container, Card, MovieImage } from './styles';
+import { 
+    Container, 
+    Card, 
+    MovieImage, 
+  } from './styles';
 
 const MovieCard = () => {
   const [movies, setMovies] = useState<any[]>();
