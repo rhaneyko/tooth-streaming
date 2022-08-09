@@ -10,7 +10,6 @@ import {
 //import { FaBars } from 'react-icons/fa';
 
 type Props = {
-    
     closeSideBar: () => void;
 }
 
