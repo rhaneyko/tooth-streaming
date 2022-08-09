@@ -25,4 +25,3 @@ const MovieTrailer: React.FC = () => {
 }
 
 export default MovieTrailer;
-
