@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
 
-    width: 800px;
+    width: 850px;
     height: 400px;
 
     justify-content: center;
@@ -71,7 +71,7 @@ export const Card = styled.div`
 
     align-items: center;
 
-    width: 700px;
+    width: 750px;
     height: 300px;
 
     align-items: center;
@@ -93,7 +93,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     
-    width: 400px;
+    width: 450px;
     height: 300px;
 
     align-items: center;
@@ -139,8 +139,13 @@ export const Genres = styled.div`
    display: flex;
    position: absolute;
 
-   margin-top: 230px;
+   width: 400px;
 
+   align-items: center;
+   justify-content: center;
+
+   margin-top: 230px;
+   
   p {
     margin: 20px 10px 0 0;
     padding: 5px 15px;
