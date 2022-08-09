@@ -4,21 +4,21 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: center;
 
-  padding: 10px;
+  padding: 15px;
    
   top: 0;
   left: 0;
   width: 100%;
   max-width: 1904px;
 
-  padding: 20px 910px 20px  100px;
   
   @media (max-width: 768px) {
     padding-left: 10px;
   }
 
-  .nav_menu {
+  /* .nav_menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,7 +68,7 @@ export const Container = styled.header`
     @media (max-width: 768px) {
       transform: translateX(0);
     }
-  }
+  } */
 `;
 
 export const Logo = styled.h1`
