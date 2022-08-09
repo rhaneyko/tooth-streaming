@@ -19,7 +19,16 @@ const MovieTrailer: React.FC = () => {
 
     return(
         <Container>
-
+            {trailer && trailer.map((trailer) => (
+                <Player key={trailer.id}>
+                    <ReactPlayer
+                        url={`https://www.youtube.com/watch?v=${trailer.key}`}
+                        width='100%'
+                        height='100%'
+                        controls={true}
+                    />
+                </Player>
+            ))}
         </Container>
     )
 }
