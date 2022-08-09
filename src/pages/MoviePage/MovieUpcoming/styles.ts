@@ -38,12 +38,15 @@ export const Blurred = styled.div`
 
 export const Card = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
-    width: 400px;
-    height: 273px;
+    align-items: center;
+
+    width: 250px;
+    height: 410px;
 
     margin: 10px;
+    padding: 10px;
 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0, 0.4);
@@ -102,6 +105,8 @@ export const ButtonTrailer = styled.button`
     align-items: center;
     justify-content: center;
 
+    position: relative;
+
     width: 200px;
     height: 30px;
 
@@ -110,9 +115,9 @@ export const ButtonTrailer = styled.button`
 
     margin-bottom: 10px;
 
-    color: #FFF;
-
     background-color: rgba(255, 255, 255, 0.2);
 `;
 
-export const ButtonText = styled.p``;
+export const ButtonText = styled.p`
+    color: #FFF;
+`;
