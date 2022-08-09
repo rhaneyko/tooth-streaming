@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
+import ReactPlayer from 'react-player';
 
 import {
     Container,
-    Title,
+    NoTrailer,
     Player,
 } from './styles'
 
 const MovieTrailer: React.FC = () => {
    const [trailer, setTrailer] = useState<any[]>();
+
     useEffect(() => {
          fetch(
              'https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
@@ -17,7 +19,17 @@ const MovieTrailer: React.FC = () => {
 
     return(
         <Container>
-           <Title></Title>
+            {trailer === undefined ? (
+            <NoTrailer>Infelizmente não temos o trailer 😢</NoTrailer>
+          ) : (
+            <Player>
+              <ReactPlayer
+                url={`https://www.youtube.com/watch?v=${trailer[0].key}`}   
+                width="100%"
+                height="100%"
+              />
+            </Player>
+          )}
         </Container>
     )
 }
