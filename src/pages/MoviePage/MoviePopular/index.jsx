@@ -50,6 +50,7 @@ const MoviePopular = () => {
       <Container>
         <Carousel 
           ref={ref}
+           enableAutoPlay
            autoPlaySpeed={5000}
            onNextEnd={({ index }) => {
                  clearTimeout(resetTimeout)
