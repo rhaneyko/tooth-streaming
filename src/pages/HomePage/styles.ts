@@ -10,6 +10,10 @@ export const Container = styled.div`
     height: 100vh;
 
     padding-top: 20px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `;
 
 export const SideLeft = styled.div`

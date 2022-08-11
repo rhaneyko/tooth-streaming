@@ -41,8 +41,6 @@ const MovieUpcoming: React.FC = () => {
         window.open(`https://www.youtube.com/watch?v=${id}`);
          }
 
-       
-
     return (
         <Container>
             {upcoming &&
