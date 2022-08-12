@@ -59,7 +59,7 @@ export const PopularMoviesContainer = styled.div`
 `;
 
 export const ScrollMovies = styled.div`
-    padding: 20px;
+    padding: 19px;
 `;
 
 export const UpcomingContainer = styled.div`
