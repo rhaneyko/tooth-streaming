@@ -21,7 +21,8 @@ const MoviePopular = () => {
       'https://api.themoviedb.org/3/movie/popular?api_key=4633d4711231f27cbe562a85959df2df&language=pt-BR'
     )
       .then((response) => response.json())
-      .then((json) => setMovies(json.results));
+      .then(response => console.log(response))
+      .then((json) => setMovies(json.results))
   }, 
   []);
 
